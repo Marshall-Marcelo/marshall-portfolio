@@ -4,7 +4,7 @@ import headerIcon from "@/assets/header-icon.png";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between shadow">
+    <nav className="flex justify-between shadow mt-2 mx-4">
       <Item>
         <ItemMedia variant="image">
           <img src={headerIcon} alt="Portfolio Icon" />
