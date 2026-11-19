@@ -31,7 +31,7 @@ import {
 
 const LandingPage = () => {
   return (
-    <div className="flex flex-col p-4 gap-8 max-w-200">
+    <div className="flex flex-col p-4 gap-8">
       <div className="flex flex-col sm:flex-row-reverse gap-2 items-center justify-center">
         <img
           className="w-1/2 sm:max-w-[320px] rounded-xl"
