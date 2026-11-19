@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 
 const AppLayout = () => {
   return (
-    <div className="flex flex-col min-h-dvh">
-      <Header />
+    <div className="flex flex-col items-center min-h-dvh">
+      <Header className="w-[calc(100%-50px)]" />
       <main className="flex-1">
         <Outlet />
       </main>

@@ -1,10 +1,20 @@
 import { Item, ItemContent, ItemTitle, ItemMedia } from "@/components/ui/item";
 import { cn } from "cn";
 import headerIcon from "@/assets/header-icon.png";
+import { Link } from "react-router";
 
-const Header = () => {
+type HeaderProps = {
+  className?: string;
+};
+
+const Header = ({ className }: HeaderProps) => {
   return (
-    <nav className="flex justify-between shadow mt-2 mx-4">
+    <nav
+      className={cn(
+        "flex justify-between shadow-md rounded-2xl mt-2 mx-4",
+        className,
+      )}
+    >
       <Item>
         <ItemMedia variant="image">
           <img src={headerIcon} alt="Portfolio Icon" />
@@ -13,9 +23,13 @@ const Header = () => {
           <ItemTitle>Marshall</ItemTitle>
         </ItemContent>
       </Item>
-      <div className="flex">
-        <HeaderItem title="Home" />
-        <HeaderItem title="Projects" />
+      <div className="flex items-center">
+        <Link to="/">
+          <HeaderItem title="Home" />
+        </Link>
+        <Link to="/projects">
+          <HeaderItem title="Projects" />
+        </Link>
       </div>
     </nav>
   );

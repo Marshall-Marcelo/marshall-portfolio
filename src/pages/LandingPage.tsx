@@ -23,64 +23,70 @@ import {
   SiJsonwebtokens,
   SiGit,
   SiDocker,
+  SiVercel,
+  SiRender,
+  SiNeon,
+  SiGoogledrive,
 } from "@icons-pack/react-simple-icons";
 
 const LandingPage = () => {
   return (
-    <div className="flex flex-col pt-4 gap-8">
-      <div className="flex flex-col sm:flex-row-reverse gap-2 items-center">
+    <div className="flex flex-col p-4 gap-8 max-w-200">
+      <div className="flex flex-col sm:flex-row-reverse gap-2 items-center justify-center">
         <img
           className="w-1/2 sm:max-w-[320px] rounded-xl"
           src={userPicture}
           alt="User Picture"
         />
-        <Item>
-          <ItemContent>
-            <ItemTitle className="text-3xl font-light">
-              Hi, I'm <span className="font-bold">Marshall</span>
-            </ItemTitle>
-            <ItemDescription>
-              A developer who enjoys developing applications and eager in
-              learning new tech.
-            </ItemDescription>
-          </ItemContent>
-        </Item>
-        <div className="flex gap-2">
-          <Badge
-            render={
-              <a
-                href="https://marcelo-resume-8da443.tiiny.site"
-                target="_blank"
-              >
-                View my Resume <ArrowUpRight />
-              </a>
-            }
-          />
+        <div className="flex flex-col">
+          <Item className="p-0">
+            <ItemContent>
+              <ItemTitle className="text-3xl font-light">
+                Hi, I'm <span className="font-bold">Marshall</span>
+              </ItemTitle>
+              <ItemDescription>
+                A developer who enjoys developing applications and eager in
+                learning new tech.
+              </ItemDescription>
+            </ItemContent>
+          </Item>
+          <div className="flex gap-2">
+            <Badge
+              render={
+                <a
+                  href="https://marcelo-resume-8da443.tiiny.site"
+                  target="_blank"
+                >
+                  View my Resume <ArrowUpRight />
+                </a>
+              }
+            />
 
-          <Badge
-            render={
-              <a
-                href="https://www.linkedin.com/in/marshall-marcelo/"
-                target="_blank"
-              >
-                LinkedIn <ArrowUpRight />
-              </a>
-            }
-            className="bg-blue-600 text-white"
-            variant="ghost"
-          />
-          <Badge
-            render={
-              <a href="https://github.com/Marshall-Marcelo" target="_blank">
-                <SiGithub /> GitHub <ArrowUpRight />
-              </a>
-            }
-            className="border-black"
-            variant="ghost"
-          />
+            <Badge
+              render={
+                <a
+                  href="https://www.linkedin.com/in/marshall-marcelo/"
+                  target="_blank"
+                >
+                  LinkedIn <ArrowUpRight />
+                </a>
+              }
+              className="bg-blue-600 text-white"
+              variant="ghost"
+            />
+            <Badge
+              render={
+                <a href="https://github.com/Marshall-Marcelo" target="_blank">
+                  <SiGithub /> GitHub <ArrowUpRight />
+                </a>
+              }
+              className="border-black"
+              variant="ghost"
+            />
+          </div>
         </div>
       </div>
-      <div className="p-3.5">
+      <div>
         <span className="text-2xl font-semibold">Skills</span>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
@@ -104,7 +110,7 @@ const LandingPage = () => {
               <Badge>
                 <SiTanstack /> React Query
               </Badge>
-              <Badge variant="ghost" className="border-black">
+              <Badge variant="ghost" className="bg-black text-white">
                 <SiShadcnui /> Shadcn UI
               </Badge>
               <Badge variant="ghost" className="bg-orange-500 text-white">
@@ -121,17 +127,34 @@ const LandingPage = () => {
               <Badge>
                 <SiNodedotjs /> Node.js
               </Badge>
-              <Badge variant="ghost" className="border-black">
+              <Badge variant="ghost" className="bg-black text-white">
                 <SiExpress /> Express
               </Badge>
               <Badge variant="ghost" className="bg-blue-500 text-white">
                 <SiPostgresql /> PostgreSQL
               </Badge>
-              <Badge variant="ghost" className="border-black">
+              <Badge variant="ghost" className="bg-black text-white">
                 <Workflow /> REST API
               </Badge>
-              <Badge variant="ghost" className="border-black">
+              <Badge variant="ghost" className="bg-black text-white">
                 <SiJsonwebtokens /> JWT
+              </Badge>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <span className="font-light">Cloud Services</span>
+            <div className="flex gap-1 flex-wrap">
+              <Badge variant="ghost" className="bg-black text-white">
+                <SiVercel /> Vercel
+              </Badge>
+              <Badge variant="ghost" className="bg-green-500 text-white">
+                <SiNeon /> Neon
+              </Badge>
+              <Badge variant="ghost" className="bg-black text-white">
+                <SiRender /> Render
+              </Badge>
+              <Badge variant="ghost" className="bg-green-700 text-white">
+                <SiGoogledrive /> Google Drive
               </Badge>
             </div>
           </div>
